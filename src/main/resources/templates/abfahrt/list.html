@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Auflistung aller Abfahrten</title>
+</head>
+<body>
+    <h1>Auflistung aller Abfahrten</h1>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Uhrzeit</th>
+            <th>Linie</th>
+            <th>Gleis</th>
+            <th>Route</th>
+        </tr>
+        <tr th:each="abfahrt: ${abfahrten}">
+            <td th:text="${abfahrt?.id}">Placeholder</td>
+            <td th:text="${abfahrt?.abfahrt}">Placeholder</td>
+            <td th:text="${abfahrt?.linie}">Placeholder</td>
+            <td th:text="${abfahrt?.gleis}">Placeholder</td>
+            <td th:text="${abfahrt?.route_id}">Placeholder</td>
+        </tr>
+    </table>
+</body>
+</html>

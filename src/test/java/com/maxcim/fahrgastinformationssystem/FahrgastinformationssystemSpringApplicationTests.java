@@ -1,0 +1,13 @@
+package com.maxcim.fahrgastinformationssystem;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class FahrgastinformationssystemSpringApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
