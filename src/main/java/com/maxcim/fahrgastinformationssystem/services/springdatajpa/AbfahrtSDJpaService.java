@@ -30,4 +30,9 @@ public class AbfahrtSDJpaService implements AbfahrtService {
     public Abfahrt findById(Long aLong) {
         return abfahrtRepository.findById(aLong).orElse(null);
     }
+
+    @Override
+    public void delete(Abfahrt object) {
+        abfahrtRepository.delete(object);
+    }
 }

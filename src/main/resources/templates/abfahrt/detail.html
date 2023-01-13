@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detailview Id </title>
+</head>
+<body>
+    <h1>Detailansicht...</h1>
+    <h4 th:text="'Id = ' + ${id}">Element-Id: </h4>
+    <br>
+    <form th:action="@{/abfahrten/{id}/delete(id=${id})}" method="post">
+    <button>Lösche den Eintrag</button>
+    </form>
+    <br><br><br>
+    <button>Bearbeite den Eintrag</button>
+</body>
+</html>

@@ -14,6 +14,7 @@
             <th>Linie</th>
             <th>Gleis</th>
             <th>Route</th>
+            <th>Detailansicht</th>
         </tr>
         <tr th:each="abfahrt: ${abfahrten}">
             <td th:text="${abfahrt?.id}">Placeholder</td>
@@ -21,7 +22,10 @@
             <td th:text="${abfahrt?.linie}">Placeholder</td>
             <td th:text="${abfahrt?.gleis}">Placeholder</td>
             <td th:text="${abfahrt?.route_id}">Placeholder</td>
+<!--            <td> <button class="detail-button" th:onclick="'openDetails(' + ${abfahrt?.id} + ')'" >Details</button></td>-->
+            <td><a th:href="@{/abfahrten/{id}(id=${abfahrt?.id})}">Details</a></td>
         </tr>
     </table>
+
 </body>
 </html>
