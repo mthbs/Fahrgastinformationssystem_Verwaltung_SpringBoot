@@ -12,6 +12,8 @@
     <button>Lösche den Eintrag</button>
     </form>
     <br><br><br>
-    <button>Bearbeite den Eintrag</button>
+    <form th:action="@{/abfahrten/{id}/edit(id=${id})}" method="post">
+        <button>Bearbeite den Eintrag</button>
+    </form>
 </body>
 </html>

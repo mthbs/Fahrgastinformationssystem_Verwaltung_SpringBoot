@@ -32,6 +32,11 @@ public class AbfahrtSDJpaService implements AbfahrtService {
     }
 
     @Override
+    public Abfahrt save(Abfahrt object) {
+        return abfahrtRepository.save(object);
+    }
+
+    @Override
     public void delete(Abfahrt object) {
         abfahrtRepository.delete(object);
     }

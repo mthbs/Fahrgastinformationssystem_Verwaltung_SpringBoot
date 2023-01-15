@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bearbeitungsseite</title>
+</head>
+<body>
+<h1>Bearbeitungsseite</h1>
+<form th:action="@{/abfahrten/edit}" th:object="${abfahrt}" method="get">
+    <div>
+        <label for="abfahrt">Abfahrt:</label>
+        <input type="text" th:field="*{abfahrt}"/>
+    </div>
+    <div>
+        <label for="linie">Zugnummer:</label>
+        <input type="text" th:field="*{linie}"/>
+    </div>
+    <div>
+        <label for="gleis">Gleis:</label>
+        <input type="text" th:field="*{gleis}"/>
+    </div>
+    <div>
+        <label for="route_id">Route-Id:</label>
+        <input type="text" th:field="*{route_id}"/>
+    </div>
+    <input type="hidden" th:field="*{id}"/>
+    <div>
+        <button type="submit">Bearbeiten</button>
+    </div>
+</form>
+</body>
+</html>
